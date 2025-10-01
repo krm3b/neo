@@ -28,7 +28,7 @@ footer {
         &::before {
             content: "";
             position: absolute;
-            background-image: url(../../img/contact.webp);
+            background-image: url(../img/contact.webp);
             background-size: cover;   /* 画像を要素に収める */
             background-repeat: no-repeat; /* 繰り返さない */
             background-position: center; /* 中央に配置 */

@@ -783,7 +783,7 @@ footer .footer-contact {
 footer .footer-contact::before {
   content: "";
   position: absolute;
-  background-image: url(../../img/contact.webp);
+  background-image: url(../img/contact.webp);
   background-size: cover; /* 画像を要素に収める */
   background-repeat: no-repeat; /* 繰り返さない */
   background-position: center; /* 中央に配置 */
@@ -1899,7 +1899,7 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
   }
 }
 .page-service .page-title::before {
-  background-image: url(../../img/background_page-service.webp);
+  background-image: url(../img/background_page-service.webp);
   background-position: 50% 50%;
 }
 .page-service .service {
@@ -1966,7 +1966,7 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
   }
 }
 .page-works .page-title::before {
-  background-image: url(../../img/background_page-works.webp);
+  background-image: url(img/background_page-works.webp);
   background-position: 50% 70%;
 }
 .page-works .explanation {
