@@ -1966,7 +1966,7 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
   }
 }
 .page-works .page-title::before {
-  background-image: url(img/background_page-works.webp);
+  background-image: url(../img/background_page-works.webp);
   background-position: 50% 70%;
 }
 .page-works .explanation {
