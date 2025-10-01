@@ -1,0 +1,108 @@
+@use '_mixin' as m;
+
+.mainvisual {
+    padding-top: 10vh;
+
+    .slick {
+        width: 100%;
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            object-position: 30%;
+        }
+    }
+    
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 2;
+    
+    
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: opacity .3s ease, transform .3s ease;
+            opacity: 1;
+        }
+    
+        &:hover::before {
+            transform: scale(1.2);
+            opacity: 0.6;
+        }
+    }
+    .slick-prev {
+        left: 5%;
+        &::before {
+            background-image: url(../img/icon_CaretCircleLeft.webp);
+        }    
+    }
+    .slick-next {
+        right: 5%;
+        &::before {
+            background-image: url(../img/icon_CaretCircleRight.webp);
+        }    
+    }
+
+
+    .catch-copy {
+        height: 30vh;
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        align-items: center;
+        padding-inline: 2%;
+        gap: clamp(5%, 5vw, 20%);
+        max-width: 1100px;
+        margin-right: auto;
+        margin-left: clamp(0px, (100vw - 1100px) / 2, 200px);
+
+        @include m.tab {
+            flex-direction: column;
+            justify-content: center;
+            align-items: normal;
+            gap: 10px;
+            margin: 0;
+
+        }
+        
+        &__text {
+            margin-bottom: 30px;
+
+            .gold-line {
+                font-size: 2rem;
+                margin-bottom: 50px;
+                @include m.tab {
+                    font-size: 1.875rem;
+                    margin-bottom: 10px;
+                }
+                @include m.sp {
+                    font-size: 1.6rem;
+                }
+                
+                &::before {
+                    height: 19px;
+                }
+            }
+            p {
+                width: fit-content;
+            }
+        }
+    
+        .contact-btn {
+            margin-bottom: 40px;
+        }
+    }
+}
+

@@ -1,0 +1,171 @@
+@use '_mixin' as m;
+
+.page-works {
+    padding-top: m.$header-height;
+
+    @include m.tab {
+        padding-top: m.$header-height;
+    }
+
+    .page-title {
+        &::before {
+            background-image: url(../../img/background_page-works.webp);
+            background-position: 50% 70%;
+        }
+    }
+
+    .explanation {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        @include m.font-family-japanese;
+
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        .text {
+            line-height: 200%;
+        }
+    }
+
+
+    //***************
+    // 共通
+    //***************
+    img {
+        height: 40vh;
+        object-fit: cover;
+
+        @include m.sp {
+            height: 35vh;
+        }
+    }
+
+    //***************
+    // 納品実績
+    //***************
+    .delivery-works {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        @include m.font-family-japanese;
+
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+        .flex {
+            display: flex;
+            gap: 3%;
+
+            @include m.tab {
+                flex-direction: column;
+            }
+
+            &__item {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 80px;
+                }
+
+                .title {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //***************
+    // SNS/メディア実績
+    //***************
+    .sns-works {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        background-color: m.$base-color-dark-gray;
+        @include m.font-family-japanese;
+
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+        .flex {
+            display: flex;
+            gap: 3%;
+
+            @include m.tab {
+                flex-direction: column;
+            }
+
+            &__item {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 80px;
+                }
+
+                .title {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    //***************
+    // 取引実績
+    //***************
+    .deal-works {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        @include m.font-family-japanese;
+
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            margin-bottom: 40px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 3%;
+
+            @include m.tab {
+                flex-direction: column;
+            }
+
+            &__item {
+                width: calc(100% / 3);
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 80px;
+                }
+
+            }
+        }
+    }
+}

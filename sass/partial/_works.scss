@@ -1,0 +1,58 @@
+@use '_mixin' as m;
+
+.works {
+    padding-top: calc(m.$header-height + m.$section-padding);
+    padding-bottom: m.$section-padding;
+
+    @include m.sp {
+        padding-top: calc(m.$header-height + m.$sp-section-padding);
+        padding-bottom: m.$sp-section-padding;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        margin-bottom: 80px;
+
+        @include m.tab {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        
+        &__item {
+            width: calc(100% / 3);
+            @include m.font-family-japanese;
+
+            @include m.tab {
+                width: 100%;
+            }
+
+            img {
+                height: 27vh;
+                object-fit: cover;
+
+                @include m.tab {
+                    height: 450px;
+                }
+                @include m.sp {
+                    height: 300px;
+                }
+            }
+
+            h3 {
+                margin-block: 15px;
+                font-weight: normal;
+            }
+            .title {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            @include m.tab {
+                .text {
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+}

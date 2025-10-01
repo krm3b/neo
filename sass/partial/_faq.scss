@@ -1,0 +1,83 @@
+@use '_mixin' as m;
+
+.faq {
+    padding-top: calc(m.$header-height + m.$section-padding);
+    padding-bottom: m.$section-padding;
+
+    @include m.sp {
+        padding-top: calc(m.$header-height + m.$sp-section-padding);
+        padding-bottom: m.$sp-section-padding;
+    }
+
+
+    .accordion-area {
+        padding-inline: 5%;
+        @include m.font-family-japanese;
+        margin-bottom: 150px;
+
+        @include m.tab {
+            padding-inline: 0;
+        }
+
+        li {
+            margin-bottom: 50px;
+            span {
+                font-family: "Crimson Text", "Noto Sans JP", sans-serif;
+                font-size: 2.5rem;
+                margin-right: 20px;
+
+                @include m.sp {
+                    margin-right: 5px;
+                }
+                
+                &.line {
+                    color: transparent;
+                    -webkit-text-stroke: 1px m.$font-color;
+                }
+            }
+
+            .title {
+                display: flex;
+                align-items: center;
+                background-color: m.$base-color-gray;
+                font-weight: normal;
+                font-size: 1rem;
+                padding: 3% 10% 3% 2%;
+                position: relative;
+                cursor: pointer;
+                transition: .3s ease;
+
+                &:hover {
+                    background-color: darken(m.$base-color-gray, 10%); 
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 2%;
+                    transform: translateY(-50%);
+                    background-image: url(../img/icon_CaretUp.webp);
+                    background-size: contain;   /* 画像を要素に収める */
+                    background-repeat: no-repeat; /* 繰り返さない */
+                    background-position: center; /* 中央に配置 */
+                    width: 30px;
+                    height: 30px;
+                    z-index: 1;
+                    transition: .3s ease;
+                }
+
+                &.close::after {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+            }
+            
+            .box {
+                display: none;
+                align-items: center;
+                background-color: m.$base-color-dark-gray;
+                padding: 3% 10% 3% 2%;
+            }
+        }
+    }
+}

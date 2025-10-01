@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字化け防止 -->
+    <meta charset="utf-8">
+    <!-- タイトル -->
+    <title>株式会社NEO商事</title>
+    <!-- ページ要約文 -->
+    <meta name="description" content="EC事業・貿易事業・OEM/ODM事業を展開し、自社ブランドの実績と幅広い商材でオリジナルブランドを生み出すNEO商事の公式サイトです。">
+    <!-- 表示領域設定 -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- アイコン -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- ファイル読み込み -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--*****************************************-->
+    <!--* header                                *-->
+    <!--*****************************************-->
+    <header>
+            <div class="neo-logo">
+                <a href="#">
+                    <img src="img/logo.webp" alt="株式会社NEO商事のアイコン">
+                    <h1>株式会社NEO商事</h1>
+                </a>
+            </div>
+            
+            <div class="toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+            <nav>
+                <ul class="nav-pc">
+                    <li class="nav-pc__item nav-pc__item--has-dropdown">
+                        <a href="company.html" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="companyTrigger">
+                            Company
+                        </a>
+                    
+                        <div class="dropdown">
+                            <div class="dropdown__title">
+                                <p class="en">Company</p>
+                                <p class="dash">会社案内</p>
+                            </div>
+        
+                            <ul class="dropdown__list" id="companyMenu" role="menu" aria-labelledby="companyTrigger">
+                                <li>
+                                    <a class="item" role="menuitem" href="company.html">
+                                        <p class="en">Company</p>
+                                        <p class="dash">企業紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="service.html">
+                                        <p class="en">Service</p>
+                                        <p class="dash">事業内容</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="works.html">
+                                        <p class="en">Works</p>
+                                        <p class="dash">実績</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Careers</p>
+                                        <p class="dash">採用情報</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </li>
+
+                    <li class="nav-pc__item nav-pc__item--has-dropdown">
+                        <a href="#" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="productsTrigger">
+                            Products
+                        </a>
+                    
+                        <div class="dropdown">
+                            <div class="dropdown__title">
+                                <p class="en">Products</p>
+                                <p class="dash">製品について</p>
+                            </div>
+        
+                            <ul class="dropdown__list" id="productsMenu" role="menu" aria-labelledby="productsTrigger">
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Products</p>
+                                        <p class="dash">製品紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">OEM/ODM</p>
+                                        <p class="dash">OEM/ODMについて</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Process</p>
+                                        <p class="dash">納品までの流れ</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-pc__item"><a href="#" class="nav-pc__trigger">News</a></li>
+
+                    <li class="nav-pc__item nav-pc__item--has-dropdown">
+                        <a href="#" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="contactTrigger">
+                            Contact
+                        </a>
+
+                        <div class="dropdown">
+                            <div class="dropdown__title">
+                                <p class="en">Contact</p>
+                                <p class="dash">お問い合わせ</p>
+                            </div>
+        
+                            <ul class="dropdown__list" id="contactMenu" role="menu" aria-labelledby="contactTrigger">
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Contact</p>
+                                        <p class="dash">お問い合わせ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">FAQ</p>
+                                        <p class="dash">よくある質問</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    </li>
+                </ul>
+
+                <ul class="nav-sp">
+                    <li class="nav-sp__item nav-sp__item--has-dropdown"> 
+                        <div class="dropdown">
+                            <div class="dropdown__title true">
+                                <p class="en">Company</p>
+                                <p class="dash">会社案内</p>
+                            </div>
+                            <ul class="dropdown__list">
+                                <li>
+                                    <a class="item" role="menuitem" href="company.html">
+                                        <p class="en">Company</p>
+                                        <p class="dash">企業紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="service.html">
+                                        <p class="en">Service</p>
+                                        <p class="dash">事業内容</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="works.html">
+                                        <p class="en">Works</p>
+                                        <p class="dash">実績</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Careers</p>
+                                        <p class="dash">採用情報</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="nav-sp__item nav-sp__item--has-dropdown">                    
+                        <div class="dropdown">
+                            <div class="dropdown__title true">
+                                <p class="en">Products</p>
+                                <p class="dash">製品について</p>
+                            </div>
+        
+                            <ul class="dropdown__list">
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Products</p>
+                                        <p class="dash">製品紹介</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">OEM/ODM</p>
+                                        <p class="dash">OEM/ODMについて</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Process</p>
+                                        <p class="dash">納品までの流れ</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-sp__item nav-sp__item--has-dropdown">
+                        <div class="dropdown">
+                            <a class="dropdown__title" href="#">
+                                <p class="en">News</p>
+                                <p class="dash">お知らせ</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-sp__item nav-sp__item--has-dropdown">
+                        <div class="dropdown">
+                            <div class="dropdown__title true">
+                                <p class="en">Contact</p>
+                                <p class="dash">お問い合わせ</p>
+                            </div>
+        
+                            <ul class="dropdown__list">
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">Contact</p>
+                                        <p class="dash">お問い合わせ</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" role="menuitem" href="#">
+                                        <p class="en">FAQ</p>
+                                        <p class="dash">よくある質問</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+    </header>
+    <!--*****************************************-->
+    <!--* main                                  *-->
+    <!--*****************************************-->
+    <main>
+        <!-- ----------------------------------- -->
+        <!-- mainvisual                          -->
+        <!-- ----------------------------------- -->
+        <div class="mainvisual">
+
+            <ul class="slick">
+                <li><img src="img/mainvisual.webp" alt="複数のビルが立ち並ぶ背景画像"></li>
+                <li><img src="img/bmt001_01.webp" alt="珪藻土バスマットの画像"></li>
+                <li><img src="img/waterbottle_hero.webp" alt="麦茶ポットの画像"></li>
+            </ul>
+
+            <div class="catch-copy">
+                <div class="catch-copy__text">
+                    <p class="gold-line">日本と中国をつなぐ架け橋</p>
+                    <p>自社ブランドでの実績と幅広い取扱商材で、お客様のニーズに柔軟に対応します</p>
+                </div>
+    
+                <div class="contact-btn">
+                    <a href="#">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- ----------------------------------- -->
+        <!-- why-choose-us                       -->
+        <!-- 選ばれる理由                          -->
+        <!-- ----------------------------------- -->
+        <section class="why-choose-us" id="why-choose-us">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">Why Choose Us</p>
+                    <h2 class="dash">選ばれる理由</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex">
+                    <div class="flex__item">
+                        <img src="img/01.webp" class="num" alt="1の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_GlobeHemisphereEast.webp" class="icon" alt="地球儀のアイコン">
+                                <h3>豊富な<span class="highlight">輸入実績</span></h3>
+                                <p>中国からの確かな輸入ルートと実績</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/02.webp" class="num" alt="2の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_Handshake.webp" class="icon" alt="握手のアイコン">
+                                <h3><span class="highlight">信頼</span>できる取引体制</h3>
+                                <p>法人取引に対応した安心のサポート</p>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/03.webp" class="num" alt="3の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_ShoppingCart.webp" class="icon" alt="買い物カートのアイコン">
+                                <h3><span class="highlight">多彩な商材</span>ラインナップ</h3>
+                                <p>幅広いジャンルの商品を取り扱い</p>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- ----------------------------------- -->
+        <!-- service                             -->
+        <!-- 事業内容                             -->
+        <!-- ----------------------------------- -->
+        <section class="service" id="service">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">Service</p>
+                    <h2 class="dash">事業内容</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex">
+                    <div class="flex__service">
+                        <img src="img/service.webp" alt="EC販売、OEM/ODM、貿易事業についての画像">
+                        <p class="text">生活雑貨のEC販売、オリジナル商品の企画開発、海外メーカーとの貿易を通じて、暮らしを豊かにする商品をお届けしています。</p>
+
+                        <a href="service.html" class="view-more btn">
+                            <span>View More</span>
+                        </a>
+                    </div>
+
+                    <div class="flex__mirx">
+                        <img src="img/pc_ocean.webp" alt="Ocean seriesの商品画像">
+                        <div class="mirx-text">
+                            <p class="title">自社ブランド「Mirx（ミラクス）」</p>
+                            <p class="text">私たち自身も商品開発に取り組み、自社オリジナルブランド「Mirx」を展開しています。 この経験から得たノウハウを、お客様の商品開発にも活かしています。</p>
+                        </div>
+
+                        <a href="#" class="view-more btn">
+                            <span>View More</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- ----------------------------------- -->
+        <!-- our-products                        -->
+        <!-- 取扱商材の紹介                        -->
+        <!-- ----------------------------------- -->
+        <section class="our-products" id="our-products">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">Our Products</p>
+                    <h2 class="dash">取り扱い商材の紹介</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="grid">
+                    <a href="#" class="grid__item">
+                        <img src="img/img_鍋敷.webp" alt="鍋敷の画像">
+                        <h3>Kitchen</h3>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <img src="img/珪藻土バスマット.webp" alt="珪藻土バスマットの画像">
+                        <h3>Bath</h3>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <img src="img/IMG_玄関収納.webp" alt="玄関収納の画像">
+                        <h3>Goods</h3>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <img src="img/サファリハット_ローズGY.webp" alt="サファリハットの画像">
+                        <h3>Fashion</h3>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <img src="img/typec-2hdmi-1800_アイコンなし.webp" alt="TypeCのコードの画像">
+                        <h3>PC</h3>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <img src="img/シルバー_60cm_消灯.webp" alt="クリスマスツリーの画像">
+                        <h3>Season</h3>
+                    </a>
+                </div>
+
+                <a href="#" class="view-more btn">
+                    <span>View More</span>
+                </a>
+            </div>            
+        </section>
+        
+        <!-- ----------------------------------- -->
+        <!-- works                               -->
+        <!-- 実績                                 -->
+        <!-- ----------------------------------- -->
+        <section class="works" id="works">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">Works</p>
+                    <h2 class="dash">実績</h2>
+                </div>
+                <p class="explanation">これまでの納品事例やメディア掲載実績、取引先をご紹介しています。</p>
+            </div>
+            <div class="container">
+                <div class="flex">
+                    <div class="flex__item">
+                        <img src="img/bonbon_メイン画像.webp" alt="ボンボンキャンドルの画像">
+                        <h3>納品実績</h3>
+                        <p class="title">イベント会社様</p>
+                        <p class="text">「ボンボンキャンドル」をノベルティとして採用</p>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/麦茶ポット_めざましテレビ.webp" alt="麦茶ポットの画像">
+                        <h3>SNS・メディア掲載実績</h3>
+                        <p class="title">メディア</p>
+                        <p class="text">めざましテレビにて、楽天市場 茶ポット・冷水筒部門 TOP5「Mirx 麦茶ポット」紹介（2025年4月18日放送分）</p>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/works1.webp" alt="イヤホンの画像">
+                        <h3>取引実績</h3>
+                        <p class="title">海外有名メーカー様</p>
+                        <p class="text">イヤホンやスーツケースをはじめ、多彩なジャンルのメーカー様と取引しております。信頼できるパートナーと築いた関係を基盤に、安心してご利用いただける商品をお届けしています。</p>
+                    </div>
+                </div>
+
+                <a href="works.html" class="view-more btn">
+                    <span>View More</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- ----------------------------------- -->
+        <!-- news                                -->
+        <!-- お知らせ                             -->
+        <!-- ----------------------------------- -->
+        <section class="news" id="news">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">News</p>
+                    <h2 class="dash">お知らせ</h2>
+                </div>
+            </div>
+            <div class="container">
+                <dl class="dl">
+                    <a href="#" class="dl__item">
+                        <dt>
+                            <p>2025年4月23日</p>
+                        </dt>
+                        <dd>
+                            <p class="category">リリース情報</p>
+                            <p>ホワイト×WOOD</p>
+                        </dd>
+                    </a>
+                    <a href="#" class="dl__item">
+                        <dt>
+                            <p>2025年4月22日</p>
+                        </dt>
+                        <dd>
+                            <p class="category">重要</p>
+                            <p>GW休業のお知らせ</p>
+                        </dd>
+                    </a>
+                    <a href="#" class="dl__item">
+                        <dt>
+                            <p>2025年4月18日</p>
+                        </dt>
+                        <dd>
+                            <p class="category">リリース情報</p>
+                            <p>Bloomシリーズ 新登場</p>
+                        </dd>
+                    </a>
+                </dl>
+
+                <a href="#" class="view-more btn">
+                    <span>View More</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- ----------------------------------- -->
+        <!-- faq                                 -->
+        <!-- よくある質問                          -->
+        <!-- ----------------------------------- -->
+        <section class="faq" id="faq">
+            <div class="section-title">
+                <div class="title">
+                    <p class="en gold-line">FAQ</p>
+                    <h2 class="dash">よくある質問</h2>  
+                </div>
+            </div>
+            <div class="container">
+
+                <ul class="accordion-area">
+                    <li>
+                        <h3 class="title text">
+                            <span class="line">Q.</span>
+                            最小ロットはどのくらいから対応できますか？
+                        </h3>
+                        <p class="box text">
+                            <span>A.</span>
+                            商品により異なりますが、100個程度からご相談可能な製品もございます。ご希望の数量に合わせて、できる限り柔軟に対応いたします。
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="title text">
+                            <span class="line">Q.</span>
+                            製造から納品まではどれくらいかかりますか？
+                        </h3>
+                        <p class="box text">
+                            <span>A.</span>
+                            製品内容や数量により異なりますが、製造開始から納品まで通常30〜60日が目安です。仕様確定や資材準備のスピードによっては短縮も可能ですので、お急ぎの際はご相談ください。
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="title text">
+                            <span class="line">Q.</span>
+                            問い合わせの返信はどのくらいで来ますか？
+                        </h3>
+                        <p class="box text">
+                            <span>A.</span>
+                            通常1〜3営業日以内にご返信いたします。営業日／平日（9時〜17時）。
+                        </p>
+                    </li>
+                </ul>
+
+                <a href="#" class="view-more btn">
+                    <span>View More</span>
+                </a>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <!--*****************************************-->
+    <!--* footer                                *-->
+    <!--*****************************************-->
+    <footer>
+        <div class="footer-contact">
+            <div class="contact-text text">
+                <p>御社の成長を共に支えるパートナーとして、 <br>
+                    最適なソリューションをご提案します。</p>
+            </div>
+
+            <div class="contact-btn">
+                <a href="#">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <div class="neo-logo">
+                    <a href="#">
+                        <img src="img/logo.webp" alt="株式会社NEO商事のアイコン">
+                        <p>株式会社NEO商事</p>
+                    </a>
+                </div>
+
+                <div class="address">
+                    <p>〒811-3125 <br>
+                        福岡県福岡県古賀市谷山1060-14</p>
+                        
+                    <p>営業時間 <br>
+                        9:00 ～ 17:00(平日のみ)</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="company.html">企業紹介</a></li>
+                    <li><a href="service.html">事業内容</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="#">製品紹介</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">OEM/ODM</a></li>
+                    <li><a href="#">納品までの流れ</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">求人情報</a></li>
+                </ul>
+            </nav>
+
+            <div class="link">
+                <ul class="shopping">
+                    <li><a href="https://www.rakuten.co.jp/neo-lifestyle/" target="_blank"><img src="img/icons8-rakuten-250.webp" alt="楽天市場のアイコン"></a></li>
+                    <li><a href="https://store.shopping.yahoo.co.jp/neolifestyleshop/" target="_blank"><img src="img/yahoo_japan_icon_w_256.webp" alt="Yahoo Japanオンラインのアイコン"></a></li>
+                    <li><a href="https://www.amazon.co.jp/stores/Mirx/page/BD35966D-E0DE-44A8-86FF-3A5CE5925F37" target="_blank"><img src="img/icons8-amazon-250.webp" alt="Amazonのアイコン"></a></li>
+                </ul>
+
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/neo_lifestyle_shop/" target="_blank"><img src="img/icons8-instagram-250.webp" alt="Instagramのアイコン"></a></li>
+                    <li><a href="https://www.tiktok.com/@neo_lifestyle_shop_" target="_blank"><img src="img/icons8-tiktok-250.webp" alt="TikTokのアイコン"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copy">
+            <p>Copyright © 株式会社NEO商事 All Rights Reserved.</p>
+
+            <a href="#" class="back-to-top" id="js-back-to-top">
+                <span></span>
+            </a>
+        </div>
+
+
+    </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

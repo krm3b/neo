@@ -1,0 +1,334 @@
+@use '_mixin' as m;
+
+.page-company {
+    padding-top: m.$header-height;
+
+    @include m.tab {
+        padding-top: m.$header-height;
+    }
+
+    .page-title {
+        &::before {
+            background-image: url(../img/background_page-company.webp);
+            background-position: 50% 70%;
+        }
+    }
+
+    .tagline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 70px;
+        font-size: 1.5rem;
+        text-shadow: 1px 3px 5px #fff;
+        padding: 10% 5%;
+        position: relative;
+
+        @include m.tab {
+            font-size: 1.2rem;
+            gap: 50px;
+        }
+        @include m.tab {
+            font-size: 1rem;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.3;
+            background-image: url(../img/mainvisual.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .line {
+            color: m.$contact-color;
+            font-size: 2.25rem;
+            font-weight: bold;
+
+            @include m.tab {
+                font-size: 1.77rem;
+            }
+            @include m.sp {
+                font-size: 1.33rem;
+            }
+        }
+
+        &__text1,
+        &__text2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            @include m.tab {
+                gap: 30px;
+            }
+        }
+    }
+
+    // *************************
+    // 企業理念
+    // *************************
+    .mission {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+    
+            @include m.tab {
+                flex-direction: column;
+                width: 100%;
+                gap: 30px;
+            }
+            
+            .flex__item {
+                position: relative;
+    
+                @include m.tab {
+                    width: 100%;
+                }
+    
+                .num {
+                    position: absolute;
+                    top: -5px;
+                    left: -5px;
+                    width: 50px;
+                    object-fit: contain;
+                    z-index: 3;
+    
+                    @include m.tab {
+                        top: 10px;
+                        left: 0px;
+                    }
+                }
+    
+                .polygon-box {
+                    position: relative;
+                    display: inline-block;
+    
+                    @include m.tab {
+                        width: 100%;
+                    }
+    
+                    .polygon {
+                        max-width: 320px;
+                        width: 100%;
+                        height: auto;
+                        display: block;
+    
+                        @include m.tab {
+                            max-width: 600px;
+                            object-fit: fill;
+                            height: 400px;                        
+                        }
+                    }
+                
+                    .content {
+                        position: absolute;
+                        top: 10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        padding-inline: 6%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        @include m.font-family-japanese;
+    
+                        .icon {
+                            width: clamp(100px, 13vw, 150px);
+                            object-fit: contain;
+                            margin-bottom: 10px;
+    
+                            @include m.tab {
+                                width: 200px;
+                            }
+                            @include m.sp {
+                                width: 170px;
+                            }
+                        }
+                        
+                        .title {
+                            font-weight: bold;
+                            color: m.$contact-color;
+                            font-size: 1.5rem;
+                            margin-bottom: 10px;
+    
+                            @include m.tab {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .highlight {
+                            font-weight: bold;
+                        }
+                
+                        .text {
+                            font-size: clamp(0.85rem, 1.7vw, 1rem);
+                            @include m.tab {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // *************************
+    // 代表挨拶
+    // *************************
+    .ceo-message {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        &__text {
+            @include m.font-family-japanese;
+            .text {
+                line-height: 200%;
+            }
+            .name {
+                margin-top: 50px;
+                text-align: right;
+            }
+        }
+    }
+
+    // *************************
+    // 会社概要
+    // *************************
+    .about {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        background-color: m.$base-color-gray;
+    
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        .table-wrapper {
+            padding-block: 2% 5%;
+            background-color: #FFF;
+        }
+
+        &__table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse; // ← セルの線を繋げる
+            border-spacing: 0;
+            @include m.font-family-japanese;
+
+            @include m.tab {
+                width: 90%;
+            }
+            th {
+                width: 30%;
+                text-align: left;
+                border-bottom: 1px m.$line-color solid;
+                padding: 3%;
+                font-weight: normal;
+            }
+            
+            td {
+                width: 70%;     
+                padding: 3%;
+                border-bottom: 1px m.$line-color solid;
+
+
+                &.map {
+                    height: 380px;
+                    border-bottom: none;
+                    @include m.tab {
+                        width: 100%;
+                        margin-bottom: 30px;
+                    }
+            
+                    iframe {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border: none; // ← 親にボーダーあるから iframe 自体の枠を消す
+                    }
+                }
+            }
+        }
+    }
+
+    
+    // *************************
+    // 沿革
+    // *************************
+    .history {
+        padding-top: calc(m.$header-height + m.$section-padding);
+        padding-bottom: m.$section-padding;
+        
+        @include m.sp {
+            padding-top: calc(m.$header-height + m.$sp-section-padding);
+            padding-bottom: m.$sp-section-padding;
+        }
+
+        .table-wrapper {
+            padding-block: 2% 5%;
+            background-color: m.$base-color-dark-gray;
+        }
+
+        &__table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse; // ← セルの線を繋げる
+            border-spacing: 0;
+            @include m.font-family-japanese;
+
+            @include m.tab {
+                width: 90%;
+            }
+
+            th {
+                width: 30%;
+                text-align: left;
+                border-bottom: 1px m.$line-color solid;
+                padding: 3%;
+                font-weight: normal;
+
+                &.rowspan {
+                    vertical-align: top;
+                }
+            }
+            
+            td {
+                width: 70%;     
+                padding: 3%;
+                border-bottom: 1px m.$line-color solid;
+            }
+
+            .no-line {
+                border-bottom: 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,449 @@
+@use '_mixin' as m;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Crimson Text", "Noto Sans JP", sans-serif;
+    font-size: 100%;
+    background-color: m.$base-color;
+    color: m.$font-color;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 2%;
+
+    @include m.tab {
+        max-width: 600px;
+        padding-inline: 5%;
+    }
+}
+
+
+.section-title {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 2%;
+    margin-bottom: 100px;
+
+    @include m.tab {
+        max-width: 600px;
+        padding-inline: 5%;
+    }
+
+    .title {
+        display: flex;
+        align-items: end;
+        color: m.$contact-color;
+        font-weight: bold;
+        gap: 30px;
+
+        @include m.sp {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+
+            .dash {
+                margin-left: 20px;
+            }
+        }
+        
+        .en {
+            font-size: 2.25rem;
+        }
+        h2 {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+    }
+    .explanation {
+        margin-top: 50px;
+    }
+}
+
+.dash {
+    position: relative;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 8px;
+        height: 2px;
+        background-color: m.$contact-color;
+    }
+    &::before {
+        left: -15px;
+    }
+    &::after {
+        right: -15px;
+    }
+}
+
+// ハイライトカラー
+.highlight {
+    color: m.$accent-color;
+}
+
+//文章の文字高さ
+.text {
+    line-height: 160%;
+}
+
+// ゴールドの線
+.gold-line {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 13px;
+        background: m.$gold-gradient;
+        opacity: 0.3;
+        z-index: -1;
+    }
+}
+
+// ******************
+// コンタクトボタン
+// ******************
+.contact-btn {
+    position: relative;
+
+    @include m.tab {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid m.$font-color;
+        transform: translate(3%, 6%); // ずらしたい分だけ移動
+        z-index: -2;
+
+        @include m.tab {
+            display: none;
+        }
+    }
+
+    a {
+        display: block;
+        padding: 15px 40px;
+        color: transparent; // テキストを透明にしてグラデーションを見せる
+        background-image: m.$gold-gradient; // ← 文字用のグラデーション
+        background-clip: text;
+        -webkit-background-clip: text;// Safari対応
+        font-size: 2.25rem;
+        position: relative;
+        transition: background-image .2s ease; 
+        
+        &:hover {
+            background-image: linear-gradient(to right, m.$accent-color, m.$accent-color);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            transition: opacity .3s ease;
+        }
+        
+        /* 初期：単色 */
+        &::before {
+            background: m.$contact-color;
+            opacity: 1;
+        }
+        
+        /* ホバー時に表示するグラデーション */
+        &::after {
+            background: m.$gold-gradient;
+            opacity: 0;
+        }
+        
+        &:hover::before {
+            opacity: 0;
+        }
+        
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+// ******************
+// View Moreボタン
+// ******************
+.view-more {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    background-color: m.$contact-color;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .3s ease;
+    position: relative;
+    overflow: hidden;
+
+    @include m.tab {
+        width: 100%;
+    }
+
+    /*== 背景が流れる（左から右） */
+    &.btn:before {
+        content: '';
+        /*絶対配置で位置を指定*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /*色や形状*/
+        background:#FFF;/*背景色*/
+        width: 100%;
+        height: 100%;
+        /*アニメーション*/
+        transition: transform .4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: right top;
+    }
+
+    /*hoverした際の形状*/
+    &.btn:hover:before{
+        transform-origin:left top;
+        transform:scale(1, 1);
+    }
+
+    span {
+        position: relative;
+        display: block;
+        color: #fff;
+        border: 1px m.$contact-color solid;
+        width: 100%;
+        padding-block: 15px;
+        z-index: 3;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: 20px;
+            width: 20px;
+            height: 3px;
+            background-color: #fff;
+            transition: .3s ease;
+        }
+        &::before {
+            top: 37%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: .3s ease;
+        }
+        &::after {
+            bottom: 37%;
+            transform: translateY(-50%) rotate(-45deg);
+            transition: .3s ease;
+        }
+
+        &:hover {
+            color: m.$contact-color;
+        }
+        &:hover::before,
+        &:hover::after {
+            background-color: m.$contact-color;
+        }
+    }
+
+}
+
+
+
+// ***********************************************
+// 下層ページ
+// ***********************************************
+// ページタイトル
+.page-title {
+    height: 175px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    font-size: 2rem;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+
+    @include m.tab {
+        font-size: 1.7rem;
+    }
+    @include m.sp {
+        font-size: 1.2rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.3;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: m.$footer-color;
+        z-index: -2;
+    }
+    
+}
+
+// セクションタイトル
+.page-section-title {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 2%;
+    margin-bottom: 100px;
+    color: m.$contact-color;
+
+
+    @include m.tab {
+        max-width: 600px;
+        padding-inline: 5%;
+    }
+
+    .gold-line {
+        width: fit-content;
+        &::before {
+            bottom: -10px;
+            width: 40px;
+            height: 4px;
+            opacity: 1;
+        }
+    }
+}
+
+
+
+// ******************
+// Backボタン
+// ******************
+.btn-wrapper {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.back {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    background-color: m.$contact-color;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .3s ease;
+    position: relative;
+    overflow: hidden;
+
+    @include m.tab {
+        width: 100%;
+    }
+
+    /*== 背景が流れる（左から右） */
+    &.btn:before {
+        content: '';
+        /*絶対配置で位置を指定*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /*色や形状*/
+        background:#FFF;/*背景色*/
+        width: 100%;
+        height: 100%;
+        /*アニメーション*/
+        transition: transform .4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: right top;
+    }
+
+    /*hoverした際の形状*/
+    &.btn:hover:before{
+        transform-origin:left top;
+        transform:scale(1, 1);
+    }
+
+    span {
+        position: relative;
+        display: block;
+        color: #fff;
+        border: 1px m.$contact-color solid;
+        width: 100%;
+        padding-block: 15px;
+        z-index: 3;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            width: 20px;
+            height: 3px;
+            background-color: #fff;
+            transition: .3s ease;
+        }
+        &::before {
+            top: 37%;
+            transform: translateY(-50%) rotate(-45deg);
+            transition: .3s ease;
+        }
+        &::after {
+            bottom: 37%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: .3s ease;
+        }
+
+        &:hover {
+            color: m.$contact-color;
+        }
+        &:hover::before,
+        &:hover::after {
+            background-color: m.$contact-color;
+        }
+    }
+
+}

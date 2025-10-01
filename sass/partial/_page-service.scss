@@ -1,0 +1,74 @@
+@use '_mixin' as m;
+
+.page-service {
+    padding-top: m.$header-height;
+
+
+    @include m.tab {
+        padding-top: m.$header-height;
+    }
+
+    .page-title {
+        &::before {
+            background-image: url(../../img/background_page-service.webp);
+            background-position: 50% 50%;
+        }
+    }
+
+    .service {
+        @include m.font-family-japanese;
+        
+        .flex {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                gap: 5%;
+                height: 40vh;
+
+                @include m.tab {
+                    flex-direction: column;
+                    height: auto;
+                    gap: 50px;
+
+                    &.reverse {
+                        flex-direction: column-reverse;
+                    }
+                }
+
+                .item-text {
+                    width: 50%;
+
+                    @include m.tab {
+                        width: 100%;
+                    }
+
+                    .page-section-title {
+                        padding-inline: 0;
+                        margin-bottom: 50px;
+                    }
+                    .title {
+                        margin-bottom: 50px;
+                    }
+                }
+
+                .img-wrapper {
+                    width: 50%;
+
+                    @include m.tab {
+                        width: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

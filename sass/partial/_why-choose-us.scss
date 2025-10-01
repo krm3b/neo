@@ -1,0 +1,108 @@
+@use '_mixin' as m;
+
+.why-choose-us {
+    background: linear-gradient(to bottom, m.$base-color-gray, m.$base-color);
+    padding-top: calc(m.$header-height + m.$section-padding);
+    padding-bottom: m.$section-padding;
+
+    @include m.sp {
+        padding-top: calc(m.$header-height + m.$sp-section-padding);
+        padding-bottom: m.$sp-section-padding;
+    }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        @include m.tab {
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+        }
+        
+        .flex__item {
+            position: relative;
+            text-align: center;
+
+            @include m.tab {
+                width: 100%;
+            }
+
+            .num {
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: 50px;
+                object-fit: contain;
+                z-index: 3;
+
+                @include m.tab {
+                    top: 10px;
+                    left: 0px;
+                }
+            }
+
+            .polygon-box {
+                position: relative;
+                display: inline-block;
+
+                @include m.tab {
+                    width: 100%;
+                }
+
+                .polygon {
+                    max-width: 320px;
+                    width: 100%;
+                    height: auto;
+                    display: block;
+
+                    @include m.tab {
+                        max-width: 600px;
+                        object-fit: fill;
+                        height: 400px;
+                    }
+                }
+            
+                .content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 100%;
+                    padding-inline: 10px;
+
+                    .icon {
+                        width: 100px;
+                        object-fit: contain;
+                        margin-bottom: 30px;
+
+                        @include m.tab {
+                            width: 200px;
+                        }
+                        @include m.sp {
+                            width: 170px;
+                        }
+                    }
+    
+                    h3 {
+                        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+                        margin-bottom: 10px;
+
+                        @include m.tab {
+                            font-size: 1.5rem;
+                        }
+                    }
+            
+                    p {
+                        font-size: clamp(0.85rem, 1.7vw, 1rem);
+                        @include m.tab {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

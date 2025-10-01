@@ -1,0 +1,63 @@
+@use '_mixin' as m;
+
+.news {
+    background-color: m.$base-color-gray;
+    padding-top: calc(m.$header-height + m.$section-padding);
+    padding-bottom: m.$section-padding;
+
+    @include m.sp {
+        padding-top: calc(m.$header-height + m.$sp-section-padding);
+        padding-bottom: m.$sp-section-padding;
+    }
+
+    .dl {
+        @include m.font-family-japanese;
+        padding-inline: 5%;
+        margin-bottom: 150px;
+
+        @include m.tab {
+            padding-inline: 0;
+            margin-bottom: 70px;
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            justify-content:flex-start;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 3%;
+            border-bottom: 1px m.$font-color solid;
+            padding: 0 3% 10px 3%;
+            transition: .3s ease;
+
+            @include m.tab {
+                grid-template-columns: 1fr; // 1カラムに変更
+                gap: 5px; // 縦の余白に
+                padding-inline: 0;
+
+            }
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            p {
+                padding-block: 3px;
+            }
+
+            dd {
+                display: grid;
+                grid-template-columns: 140px 1fr;
+                align-items: center;
+                gap: 3%;
+                
+                .category {
+                    text-align: center;
+                    background-color: m.$contact-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

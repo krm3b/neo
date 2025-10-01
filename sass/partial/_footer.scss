@@ -1,0 +1,290 @@
+@use '_mixin' as m;
+
+footer {
+    margin-top: 100px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: m.$footer-color;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+    }
+
+    .footer-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18%;
+        padding: 8% 5%;
+        position: relative;
+
+        @include m.tab {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../../img/contact.webp);
+            background-size: cover;   /* 画像を要素に収める */
+            background-repeat: no-repeat; /* 繰り返さない */
+            background-position: center; /* 中央に配置 */
+            opacity: 0.9;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+        }
+
+        .contact-text {
+            text-align: center;
+            background-color: m.$base-color;
+            padding: 5% 3%;
+            border: 1px m.$gold-color1 solid;
+
+            @include m.tab {
+                width: 100%;
+            }
+            @include m.sp {
+                font-size: clamp(0.75rem, 4.2vw, 1.2rem);
+            }
+        }
+
+        .contact-btn {
+            @include m.tab {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 2%;
+        height: 47vh;
+
+        @include m.tab {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 15%;
+            padding: 0 5%;
+            margin-block: 70px;
+        }
+
+        .info {
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include m.tab {
+                width: 100%;
+            }
+
+            .neo-logo {
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    gap: 5px;
+
+                    @include m.tab {
+                        justify-content: center;
+                        margin-bottom: 30px
+                    }
+            
+                    p {
+                        @include m.font-family-japanese;
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                        color: #fff;
+                    }
+            
+                    img {
+                        width: 20px;
+                        display: block;
+                    }
+                }
+            }
+
+            .address {
+                color: #fff;
+                @include m.font-family-japanese;
+                p {
+                    margin-block: 10px;
+                }
+            }
+        }
+
+        nav {
+            width: 36%;
+            display: flex;
+            justify-content: center;
+            gap: 15%;
+            @include m.font-family-japanese;
+
+            @include m.tab {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li {
+                    width: 100%;
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 1.125rem;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: -15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-color: transparent transparent transparent #ffff;
+                            border-width: 5px 0px 5px 8.66px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -7px;
+                            left: 0;
+                            height: 2px;
+                            width: 0;
+                            background-color: #fff;
+                            opacity: 0;
+                            transition: all .3s ease;
+                        }
+                        
+                        &:hover::after {
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .link {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include m.tab {
+                gap: 40px;
+                width: 100%;
+            }
+
+            .shopping {
+                display: flex;
+                gap: 6%;
+
+                @include m.tab {
+                    justify-content: center;
+                }
+            }
+
+            .sns {
+                display: flex;
+                gap: 10%;
+
+                @include m.tab {
+                    justify-content: center;
+                }
+            }
+
+            a {
+                display: inline-block;
+                transition: all .3s ease;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+    }
+
+    .copy {
+        background-color: #fff;
+        padding-block: 15px;
+        @include m.font-family-japanese;
+        text-align: center;
+        font-size: 0.625rem;
+        position: relative;
+
+        .back-to-top {
+            content: "";
+            position: absolute;
+            top: -50%;
+            transform: translateY(-15%);
+            right: 5%;
+            width: 60px;
+            height: 60px;
+            background-color: m.$contact-color;
+            border-radius: 50%;
+            border: m.$gold-color1 1px solid;
+            transition: .3s ease;
+            
+            &:hover {
+                background-color: m.$gold-color1;
+
+            }
+
+            span {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition: .3s ease;
+
+                &::before, 
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 47%;
+                    background-color: m.$gold-color1;
+                    height: 2px;
+                    width: 17px;
+                }
+                &::before {
+                    left: 26%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                &::after {
+                    right: 26%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                &:hover::before,
+                &:hover::after {
+                    background-color: m.$contact-color;
+                }
+
+            }
+        }
+    }
+
+
+
+}

@@ -1,0 +1,58 @@
+// ---------------------------------------
+// responsive
+// ---------------------------------------
+$tab: 768px;
+$sp: 425px;
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+// ---------------------------------------
+// mixin
+// ---------------------------------------
+//日本語テキストのみの時の英字/数字のフォント統一
+@mixin font-family-japanese {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// ---------------------------------------
+// 変数宣言
+// ---------------------------------------
+$header-height: 54px;             //ヘッダー高さ
+$sp-header-height: 50px;          //ヘッダー高さ（スマホ）
+$section-padding: 80px;          //セクション間のpadding
+$sp-section-padding: 70px;        //セクション間のpadding（スマホ）
+
+$base-color: #FFFFFF;           //ベースカラー
+$base-color-gray: #F3F4F6;      //ベースカラー
+$base-color-dark-gray: #E5E7EB; //ベースカラー
+
+$main-color: #E4E9EF;           //メインカラー
+$footer-color: #6B7280;         //フッターカラー
+
+$accent-color: #144BA0;         //アクセントカラー
+$contact-color: #092A63;        //コンタクトカラー
+
+$font-color: #333333;           //フォントカラー
+$line-color: #7E7E7E;           //ラインカラー
+
+$gold-color1: #F2DC6D;          //ゴールドカラー
+$gold-color2: #DB9F13;          //ゴールドカラー
+$gold-gradient: linear-gradient(to right, $gold-color1, $gold-color2);
+
+// ---------------------------------------
+// 関数
+// ---------------------------------------
+
+

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字化け防止 -->
+    <meta charset="utf-8">
+    <!-- タイトル -->
+    <title>株式会社NEO商事 | 会社案内</title>
+    <!-- ページ要約文 -->
+    <meta name="description" content="EC事業・貿易事業・OEM/ODM事業を展開し、自社ブランドの実績と幅広い商材でオリジナルブランドを生み出すNEO商事の公式サイトです。">
+    <!-- 表示領域設定 -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- アイコン -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- ファイル読み込み -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--*****************************************-->
+    <!--* header                                *-->
+    <!--*****************************************-->
+    <header>
+        <div class="neo-logo">
+            <a href="index.html">
+                <img src="img/logo.webp" alt="株式会社NEO商事のアイコン">
+                <h1>株式会社NEO商事</h1>
+            </a>
+        </div>
+        
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <nav>
+            <ul class="nav-pc">
+                <li class="nav-pc__item nav-pc__item--has-dropdown">
+                    <a href="company.html" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="companyTrigger">
+                        Company
+                    </a>
+                
+                    <div class="dropdown">
+                        <div class="dropdown__title">
+                            <p class="en">Company</p>
+                            <p class="dash">会社案内</p>
+                        </div>
+    
+                        <ul class="dropdown__list" id="companyMenu" role="menu" aria-labelledby="companyTrigger">
+                            <li>
+                                <a class="item" role="menuitem" href="company.html">
+                                    <p class="en">Company</p>
+                                    <p class="dash">企業紹介</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="service.html">
+                                    <p class="en">Service</p>
+                                    <p class="dash">事業内容</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="works.html">
+                                    <p class="en">Works</p>
+                                    <p class="dash">実績</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Careers</p>
+                                    <p class="dash">採用情報</p>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </li>
+
+                <li class="nav-pc__item nav-pc__item--has-dropdown">
+                    <a href="#" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="productsTrigger">
+                        Products
+                    </a>
+                
+                    <div class="dropdown">
+                        <div class="dropdown__title">
+                            <p class="en">Products</p>
+                            <p class="dash">製品について</p>
+                        </div>
+    
+                        <ul class="dropdown__list" id="productsMenu" role="menu" aria-labelledby="productsTrigger">
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Products</p>
+                                    <p class="dash">製品紹介</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">OEM/ODM</p>
+                                    <p class="dash">OEM/ODMについて</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Process</p>
+                                    <p class="dash">納品までの流れ</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="nav-pc__item"><a href="#" class="nav-pc__trigger">News</a></li>
+
+                <li class="nav-pc__item nav-pc__item--has-dropdown">
+                    <a href="#" class="nav-pc__trigger" aria-haspopup="true" aria-expanded="false" id="contactTrigger">
+                        Contact
+                    </a>
+
+                    <div class="dropdown">
+                        <div class="dropdown__title">
+                            <p class="en">Contact</p>
+                            <p class="dash">お問い合わせ</p>
+                        </div>
+    
+                        <ul class="dropdown__list" id="contactMenu" role="menu" aria-labelledby="contactTrigger">
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Contact</p>
+                                    <p class="dash">お問い合わせ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">FAQ</p>
+                                    <p class="dash">よくある質問</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </li>
+            </ul>
+
+            <ul class="nav-sp">
+                <li class="nav-sp__item nav-sp__item--has-dropdown"> 
+                    <div class="dropdown">
+                        <div class="dropdown__title true">
+                            <p class="en">Company</p>
+                            <p class="dash">会社案内</p>
+                        </div>
+                        <ul class="dropdown__list">
+                            <li>
+                                <a class="item" role="menuitem" href="company.html">
+                                    <p class="en">Company</p>
+                                    <p class="dash">企業紹介</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="service.html">
+                                    <p class="en">Service</p>
+                                    <p class="dash">事業内容</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="works.html">
+                                    <p class="en">Works</p>
+                                    <p class="dash">実績</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Careers</p>
+                                    <p class="dash">採用情報</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="nav-sp__item nav-sp__item--has-dropdown">                    
+                    <div class="dropdown">
+                        <div class="dropdown__title true">
+                            <p class="en">Products</p>
+                            <p class="dash">製品について</p>
+                        </div>
+    
+                        <ul class="dropdown__list">
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Products</p>
+                                    <p class="dash">製品紹介</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">OEM/ODM</p>
+                                    <p class="dash">OEM/ODMについて</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Process</p>
+                                    <p class="dash">納品までの流れ</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="nav-sp__item nav-sp__item--has-dropdown">
+                    <div class="dropdown">
+                        <a class="dropdown__title" href="#">
+                            <p class="en">News</p>
+                            <p class="dash">お知らせ</p>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-sp__item nav-sp__item--has-dropdown">
+                    <div class="dropdown">
+                        <div class="dropdown__title true">
+                            <p class="en">Contact</p>
+                            <p class="dash">お問い合わせ</p>
+                        </div>
+    
+                        <ul class="dropdown__list">
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">Contact</p>
+                                    <p class="dash">お問い合わせ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item" role="menuitem" href="#">
+                                    <p class="en">FAQ</p>
+                                    <p class="dash">よくある質問</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--*****************************************-->
+    <!--* main                                  *-->
+    <!--*****************************************-->
+    <main class="page-company">
+        <!-- ----------------------------------- -->
+        <!-- page-title                          -->
+        <!-- ----------------------------------- -->
+        <div class="page-title">
+            <h2>企業紹介</h2>
+        </div>
+        
+        <!-- ----------------------------------- -->
+        <!-- tagline                             -->
+        <!-- ----------------------------------- -->
+        <div class="tagline">
+            <div class="tagline__text1">
+                <p>私たちは、ECという舞台を通じて、</p>
+                <p class="line">「日本と中国をつなぐ架け橋」</p>
+                <p>となることを目指しています。</p>
+            </div>
+            <div class="tagline__text2">
+                <p>ものづくりではなく、</p>
+                <p class="line">“ものを選び、届ける”</p>
+                <p>ことにこそ価値があると考え、</p>
+                <p>生活に役立つ商品を丁寧に選定・提案していきます。</p>
+            </div>
+        </div>
+
+        <!-- ----------------------------------- -->
+        <!-- mission                             -->
+        <!-- 経営理念                             -->
+        <!-- ----------------------------------- -->
+        <section class="mission">
+            <div class="page-section-title">
+                <h2 class="gold-line">経営理念</h2>
+            </div>
+
+            <div class="container">
+                <div class="flex">
+                    <div class="flex__item">
+                        <img src="img/01.webp" class="num" alt="1の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon_blue.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_FlagPennant.webp" class="icon" alt="旗のアイコン">
+                                <p class="title">Mission</p>
+                                <p class="text">お客様に<span class="highlight">便利でちょっと豊かなくらし</span>を届けるために、確かな目で選び抜いた商品をECを通じて提供します。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/02.webp" class="num" alt="2の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon_blue.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_RoadHorizon.webp" class="icon" alt="道のアイコン">
+                                <p class="title">Vision</p>
+                                <p class="text">世界とつながる<span class="highlight">“楽しい”</span>仕事を通じて、信頼される越境EC企業になること。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex__item">
+                        <img src="img/03.webp" class="num" alt="3の画像">
+                        <div class="polygon-box">
+                            <img src="img/Polygon_blue.webp" alt="五角形" class="polygon">
+                            <div class="content">
+                                <img src="img/icon_HandPeace.webp" class="icon" alt="手でピースのアイコン">
+                                <p class="title">Motto</p>
+                                <p class="text">コミュニケーションを大切にし、全員で協力し合いながら、年齢や性別にとらわれない<span class="highlight">自由な発想</span>を尊重します。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------- -->
+        <!-- ceo-message                         -->
+        <!-- 代表挨拶                             -->         
+        <!-- ----------------------------------- -->
+        <section class="ceo-message">
+            <div class="page-section-title">
+                <h2 class="gold-line">代表あいさつ</h2>
+            </div>
+
+            <div class="ceo-message__text container">
+                <p class="text">NEO商事のサイトへのご訪問、誠にありがとうございます。
+                    中国の便利な商品や、現地で見つけた「ちょっと気が利く」アイテムをご紹介しながら、現在は越境ECにも積極的に取り組んでいます。
+                    本社は福岡県古賀市に構えており、主な輸入先である中国には頻繁に足を運び、現地で実際に見て・聞いて・試して、日々新商品をチェックしています。最近では、中国製品の品質やデザイン性も目覚ましく向上しており、コストパフォーマンスに優れた魅力的な商品が次々と登場しています。
+                    楽天市場・Amazon・Yahoo!などの各種モールにも出店しており、幅広いお客様との接点を持ちながら、常に新しい提案を目指しています。
+                    これまで培ってきた経験や現地での実感を、みなさまの暮らしに少しでも役立てられるよう、これからも挑戦を続けてまいります。私たちの目指すのは、ただの便利グッズではなく、日常にちょっとした豊かさと余裕をもたらすようなアイテムのご紹介です。
+                </p>
+                <p class="name">張 亦馳</p>
+            </div>
+        </section>    
+
+        <!-- ----------------------------------- -->
+        <!-- about                               -->
+        <!-- 会社概要                             -->
+        <!-- ----------------------------------- -->
+        <section class="about">
+            <div class="page-section-title">
+                <h2 class="gold-line">会社概要</h2>
+            </div>
+
+            <div class="container">
+                <div class="table-wrapper">
+                    <table class="about__table">
+                        <tbody>
+                            <tr>
+                                <th class="label">会社名</th>
+                                <td class="descriptor">株式会社NEO商事</td>
+                            </tr>
+                            <tr>
+                                <td class="map" colspan="2">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.837360368915!2d130.4975407763748!3d33.71315713555797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35418790d88d7d87%3A0x9fe02e53f0c85eae!2z44CSODExLTMxMjUg56aP5bKh55yM5Y-k6LOA5biC6LC35bGx77yR77yQ77yW77yQ4oiS77yR77yU!5e0!3m2!1sja!2sjp!4v1759208887548!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="label">所在地</th>
+                                <td class="descriptor">〒811-3125 <br>
+                                    福岡県古賀市谷山1060-14</td>
+                            </tr>
+    
+                            <tr>
+                                <th class="label">設立</th>
+                                <td class="descriptor">2021年7月</td>
+                            </tr>
+                            <tr>
+                                <th class="label">資本金</th>
+                                <td class="descriptor">1,000万円</td>
+                            </tr>
+                            <tr>
+                                <th class="label">代表者</th>
+                                <td class="descriptor">張 亦馳</td>
+                            </tr>
+                            <tr>
+                                <th class="label">事業内容</th>
+                                <td class="descriptor">EC販売 / OEM・ODM / 貿易事業</td>
+                            </tr>
+                            <tr>
+                                <th class="label">受託製造工場</th>
+                                <td class="descriptor">中国市場複数と連携</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------------------------------- -->
+        <!-- history                             -->
+        <!-- 沿革                                 -->
+        <!-- ----------------------------------- -->
+        <section class="history">
+            <div class="page-section-title">
+                <h2 class="gold-line">沿革</h2>
+            </div>
+
+            <div class="container">
+                <div class="table-wrapper">
+                    <table class="history__table">
+                        <tbody>
+                            <tr>
+                                <th class="label">2021年 7月</th>
+                                <td class="descriptor">株式会社NEO商事 創業</td>
+                            </tr>
+                            <tr>
+                                <th class="label">2021年 8月</th>
+                                <td class="descriptor">楽天市場店 出店開始</td>
+                            </tr>
+                            <tr>
+                                <th class="label">2022年 1月</th>
+                                <td class="descriptor">「Yahoo!ショッピング」に出店</td>
+                            </tr>
+                            <tr>
+                                <th class="label">2022年 3月</th>
+                                <td class="descriptor">自社ブランド「Mirx(ミラクス)」シリーズ始動</td>
+                            </tr>
+                            <tr>
+                                <th class="label">2022年8月</th>
+                                <td class="descriptor">「Amazon」に出店</td>
+                            </tr>
+                            <tr>
+                                <th class="label rowspan" rowspan="3">2025年8月</th>
+                                <td class="descriptor no-line">「Temu」に出店</td>
+
+                            </tr>
+                            <tr>
+                                <td class="descriptor no-line">「TikTok Shop」に出店</td>
+                            </tr>
+                            <tr>
+                                <td class="descriptor">オーストラリア産肉の輸入卸事業を開始</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>        
+
+
+
+        <!-- 戻るボタン -->
+        <div class="container btn-wrapper">
+            <a href="index.html" class="back btn">
+                <span>Back</span>
+            </a>
+        </div>
+
+        
+    </main>
+    <!--*****************************************-->
+    <!--* footer                                *-->
+    <!--*****************************************-->
+    <footer>
+        <div class="footer-contact">
+            <div class="contact-text text">
+                <p>御社の成長を共に支えるパートナーとして、 <br>
+                    最適なソリューションをご提案します。</p>
+            </div>
+
+            <div class="contact-btn">
+                <a href="#">
+                    Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="info">
+                <div class="neo-logo">
+                    <a href="index.html">
+                        <img src="img/logo.webp" alt="株式会社NEO商事のアイコン">
+                        <p>株式会社NEO商事</p>
+                    </a>
+                </div>
+
+                <div class="address">
+                    <p>〒811-3125 <br>
+                        福岡県福岡県古賀市谷山1060-14</p>
+                        
+                    <p>営業時間 <br>
+                        9:00 ～ 17:00(平日のみ)</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="company.html">企業紹介</a></li>
+                    <li><a href="service.html">事業内容</a></li>
+                    <li><a href="works.html">実績</a></li>
+                    <li><a href="#">製品紹介</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">OEM/ODM</a></li>
+                    <li><a href="#">納品までの流れ</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">求人情報</a></li>
+                </ul>
+            </nav>
+
+            <div class="link">
+                <ul class="shopping">
+                    <li><a href="https://www.rakuten.co.jp/neo-lifestyle/" target="_blank"><img src="img/icons8-rakuten-250.webp" alt="楽天市場のアイコン"></a></li>
+                    <li><a href="https://store.shopping.yahoo.co.jp/neolifestyleshop/" target="_blank"><img src="img/yahoo_japan_icon_w_256.webp" alt="Yahoo Japanオンラインのアイコン"></a></li>
+                    <li><a href="https://www.amazon.co.jp/stores/Mirx/page/BD35966D-E0DE-44A8-86FF-3A5CE5925F37" target="_blank"><img src="img/icons8-amazon-250.webp" alt="Amazonのアイコン"></a></li>
+                </ul>
+
+                <ul class="sns">
+                    <li><a href="https://www.instagram.com/neo_lifestyle_shop/" target="_blank"><img src="img/icons8-instagram-250.webp" alt="Instagramのアイコン"></a></li>
+                    <li><a href="https://www.tiktok.com/@neo_lifestyle_shop_" target="_blank"><img src="img/icons8-tiktok-250.webp" alt="TikTokのアイコン"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copy">
+            <p>Copyright © 株式会社NEO商事 All Rights Reserved.</p>
+
+            <a href="#" class="back-to-top" id="js-back-to-top">
+                <span></span>
+            </a>
+        </div>
+
+
+    </footer>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
