@@ -77,14 +77,17 @@
             .mirx-text {
                 margin-bottom: auto;
 
+
                 @include m.tab {
                     margin-block: 30px;
                 }
 
                 .title {
+                    @include m.font-family-japanese;
                     font-weight: bold;
                     margin-top: 20px;
                     margin-bottom: 15px;
+
                 }
             }
         }

@@ -109,6 +109,8 @@ img {
 //文章の文字高さ
 .text {
     line-height: 160%;
+    @include m.font-family-japanese;
+
 }
 
 // ゴールドの線
