@@ -1258,7 +1258,9 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
 }
 .service .flex__service {
   width: 40%;
+  height: 65vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 @media (max-width: 768px) {
@@ -1278,7 +1280,7 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
 }
 .service .flex__service .text {
   margin-top: 60px;
-  margin-bottom: 80px;
+  margin-bottom: auto;
 }
 @media (max-width: 768px) {
   .service .flex__service .text {
@@ -1287,7 +1289,9 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
 }
 .service .flex__mirx {
   width: 60%;
+  height: 65vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 @media (max-width: 768px) {
@@ -1311,7 +1315,7 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
   }
 }
 .service .flex__mirx .mirx-text {
-  margin-bottom: 80px;
+  margin-bottom: auto;
 }
 @media (max-width: 768px) {
   .service .flex__mirx .mirx-text {
