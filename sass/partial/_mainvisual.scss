@@ -65,12 +65,13 @@
         padding-inline: 2%;
         gap: clamp(5%, 5vw, 20%);
         max-width: 1100px;
-        margin-right: auto;
-        margin-left: clamp(0px, (100vw - 1100px) / 2, 200px);
+        // margin-right: auto;
+        // margin-left: clamp(0px, (100vw - 1100px) / 2, 200px);
+        margin: 0 auto;
 
         @include m.tab {
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: normal;
             gap: 10px;
             margin: 0;
@@ -79,6 +80,10 @@
         
         &__text {
             margin-bottom: 30px;
+
+            @include m.tab {
+                margin-bottom: 0;
+            }
 
             .gold-line {
                 font-size: 2rem;
@@ -90,7 +95,7 @@
                 @include m.sp {
                     font-size: 1.6rem;
                 }
-                
+
                 &::before {
                     height: 19px;
                 }
@@ -102,6 +107,13 @@
     
         .contact-btn {
             margin-bottom: 40px;
+
+            @include m.tab {
+                margin-bottom: 0;
+                a {
+                    padding: 1.2vh 40px;
+                }
+            }
         }
     }
 }

@@ -361,10 +361,10 @@ img {
   /*アニメーション*/
   transition: transform 0.4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
   transform: scale(0, 1);
-  transform-origin: right top;
+  transform-origin: left top;
 }
 .back.btn:hover:before {
-  transform-origin: left top;
+  transform-origin: right top;
   transform: scale(1, 1);
 }
 .back span {
@@ -1087,13 +1087,12 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
   padding-inline: 2%;
   gap: clamp(5%, 5vw, 20%);
   max-width: 1100px;
-  margin-right: auto;
-  margin-left: clamp(0px, (100vw - 1100px) / 2, 200px);
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .mainvisual .catch-copy {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: normal;
     gap: 10px;
     margin: 0;
@@ -1101,6 +1100,11 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
 }
 .mainvisual .catch-copy__text {
   margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .mainvisual .catch-copy__text {
+    margin-bottom: 0;
+  }
 }
 .mainvisual .catch-copy__text .gold-line {
   font-size: 2rem;
@@ -1125,6 +1129,14 @@ footer .copy .back-to-top span:hover::before, footer .copy .back-to-top span:hov
 }
 .mainvisual .catch-copy .contact-btn {
   margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .mainvisual .catch-copy .contact-btn {
+    margin-bottom: 0;
+  }
+  .mainvisual .catch-copy .contact-btn a {
+    padding: 1.2vh 40px;
+  }
 }
 
 .why-choose-us {

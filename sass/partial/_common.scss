@@ -400,12 +400,12 @@ img {
         /*アニメーション*/
         transition: transform .4s cubic-bezier(0.8, 0, 0.2, 1) 0s;
         transform: scale(0, 1);
-        transform-origin: right top;
+        transform-origin: left top;
     }
 
     /*hoverした際の形状*/
     &.btn:hover:before{
-        transform-origin:left top;
+        transform-origin:right top;
         transform:scale(1, 1);
     }
 
